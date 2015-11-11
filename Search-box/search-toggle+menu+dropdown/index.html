@@ -13,7 +13,7 @@
 			
 			#search-box{margin-top:20px;color: #777;}
 			#search-box:hover{color: #fff;}
-			.search-box{right:0;top:100%;padding:15px;display:none;background:#fcfafb;position:absolute;box-shadow:0px 5px rgba(91, 91, 91, 0.2);margin-top:0;z-index:100;}
+			.search-box{right:0;top:100%;padding:15px;display: none; transition:all 0.5s; background:#fcfafb;position:absolute;box-shadow:0px 5px rgba(91, 91, 91, 0.2);margin-top:0;z-index:100;}
 			.menusearch{cursor:pointer;padding:0 10px;}
 	    </style>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -40,46 +40,33 @@
 							<div class="collapse  navbar-collapse">
 								<a class="navbar-brand" href="#">Logo</a>
 								<ul class="nav navbar-nav">
-									<li><a href="#">প্রচ্ছদ</a></li>
-									<li><a href="#">আমরা</a></li>
-									<li><a href="#">কোর্স</a></li>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Services</a></li>
 									<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">অন্যান্য   <span class="caret"></span></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All   <span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="#">খবর</a></li>
-										<li><a href="#">মতামত</a></li>
-										<li><a href="#">মন্তব্য</a></li>
-										<li><a href="#">কর্পোরেট নেতৃত্ব প্রশিক্ষণ</a></li>
-										<li><a href="#">পর্বতারোহণ প্রশিক্ষণ</a></li>
-										<li><a href="#">দিগন্ত উন্মোচন</a></li>
-										<li><a href="#">উদ্দেশ্য মাউন্ট এভারেস্ট</a></li>
-										<li><a href="#">শিশুদের জন্যে অভিযান</a></li>
-										<li><a href="#">প্রাথমিক টিকে থাকা প্রশিক্ষণ</a></li>
-										<li><a href="#">আন্তর্জাতিক বাংলা ম্যারাথন সাঁতার</a></li>
-										<li><a href="#">গ্রীষ্ম/শীত ক্যাম্প</a></li>
-										<li><a href="#">ট্রাই-এথলন প্রতিযোগিতা</a></li>
-										<li><a href="#">সাইক্লিং বাংলাদেশ</a></li>
-										<li><a href="#">ভালো কাজে বাংলাদেশ</a></li>
-										<li><a href="#">প্রকৃতির সাথে সখ্য</a></li>
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Services</a></li>
 									</ul>
 								</li>
-									<li><a href="#">আবেদন</a></li>
-									<li><a href="#">উদ্দেশ্য</a></li>
-									<li><a href="#">যোগাযোগ</a></li>
+									<li><a href="#">Portfolio</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact</a></li>
 								</ul>
 
-								<i class="fa fa-search menusearch" id="search-box"></i>
+								<i class="fa fa-search menusearch pull-right" id="search-box"></i>
 						        <div class="search-box">
 						            <form class="srch_submit" action="http://www.google.com.bd/cse" id="cse-search-box" target="_blank">
 						                <input type="hidden" name="cx" value="007666740493432827487:ge-zpe__pxs" />
 						                <input type="hidden" name="ie" value="utf-8" />
 						                <div class="input-group">
 						                    <input id="q" name="q" maxlength="200" type="text" placeholder="Search" class="form-control">
-						                    <span class="input-group-btn"><button class="btn btn-warning" id="sa" name="sa" type="submit">Search</button></span>
+						                    <span class="input-group-btn"><button class="btn btn-primary" id="sa" name="sa" type="submit">Search</button></span>
 						                </div>
 						            </form>
 						        </div>
-
 							</div>
 						</div>
 					</nav><!-- end nav -->
