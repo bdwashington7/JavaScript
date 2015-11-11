@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Form Validation</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" />
+	<style type="text/css">
+		label{
+			width:150px;
+			display: inline-block;
+		}
+		span{width:200px;}
+		body{
+			width: 970px;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+
+
+
+<form method="POST" action="" onsubmit="return checkForm(this);">
+<fieldset>
+	<legend>User Registration</legend>
+	<p>
+		<label for="">Username:</label>
+		<input title="Enter your username" type="text" required  name="username"/>
+	</p>
+	<p>
+		<label for="">Password: </label>
+		<input  type="password" title="Please enter the Password."  name="pwd1" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : '');	if(this.checkValidity())form.pwd2.pattern = this.value;" required/>
+	</p>
+	<p>
+		<label for="">Confirm Password:</label>
+		<input title="Please enter the same Password as above" type="password" required  name="pwd2" 
+		onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');">
+	</p>
+	<p><input type="submit" value="Submit"></p>
+</fieldset>
+</form>
+<br />
+<br />
+<br />
+<br />
+
+
+<form action="">
+	<h3>User Registration</h3>
+	<span id='message'></span> <br />
+	
+	<label>password :</label>
+	<input name="password" id="password" type="password" />
+	
+	<br>
+	<label>confirm password:</label>
+	<input type="password" name="confirm_password" id="confirm_password" />
+	
+	<br />
+	<input type="submit" name="" id="" /> 
+</form>
+
+	<script src="jquery.min.js"></script>
+	<script>
+		$('#confirm_password').on('keyup', function () {
+			if ($(this).val() == $('#password').val()) {
+				$('#message').html('<i class="fa fa-check"></i> Password matched!').css({"color": "green"});
+			} else $('#message').html('<i class="fa fa-close"></i> Password not matching').css({"color": "red"});
+		});
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Form Validation</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" />
+	<style type="text/css">
+		label{
+			width:150px;
+			display: inline-block;
+		}
+		span{width:200px;}
+		body{
+			width: 970px;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<form action="" onsubmit="return checkForm(this);" method="post">
+		<h3>User Registration</h3>
+		<span id='message'></span> <br />
+		
+		<label for="">Username</label>
+		<input type="text" name="" id="" required>
+		
+		<br>
+		<label for="">Email Address</label>
+		<input type="email" name="" id="" required>
+		
+		<br>
+		<label>password :</label>
+		<input  type="password" title="Please enter the Password." id="password" name="password" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : '');	if(this.checkValidity())form.confirm_password.pattern = this.value;" required/>
+		
+		<br>
+		<label>confirm password:</label>
+		<input title="Please enter the same Password as above" type="password" required  id="confirm_password"  name="confirm_password" 
+			onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');">
+		
+		<br />
+		<input type="submit" name="" id="" /> 
+	</form>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$('#confirm_password').on('keyup', function () {
+			if ($(this).val() == $('#password').val()) {
+				$('#message').html('<i class="fa fa-check"></i> Password matched!').css({"color": "green"});
+			} else $('#message').html('<i class="fa fa-close"></i> Password not matching').css({"color": "red"});
+		});
+	</script>
+
+</body>
+</html>
+
