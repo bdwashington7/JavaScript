@@ -1,0 +1,54 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<style type="text/css">
+ #content{
+ font-family: 'Lato', sans-serif;
+ text-align:justify;
+ font-size:14px;
+ } 
+</style>
+
+
+</head>
+
+<body>
+
+<div style="background-color:gray;width:700px;height:400px;">
+<div id="content" style="height:260px">
+ProgrammingFree is a technical blog with quality articles on various programming languages with appropriate source code,screenshots and live demos.This blog contains information on several programming topics with appropriate screenshots and code. I never write a blog here on any topic, without actually implementing it myself to make sure that I am not misleading the readers of my blog. I am a beginner in writing though not in programming, so I really value your suggestions on my writing skills. Please remember this - the best place to get help for the issues you have in your own implementation is at technical forums and not on blogs. I welcome comments about technical inaccuracies you may spot, or typos - or indeed improvements you might want to offer to the code I have presented, or any other aspect of this site. 
+
+</div>
+<a href="#" id="incfont">A+</a>
+<a href="#" id="decfont">A-</a>
+</div>
+
+
+
+<script src="jquery-2.1.4.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  $('#incfont').click(function(){   
+        curSize= parseInt($('#content').css('font-size')) + 2;
+  if(curSize<=20)
+
+        $('#content').css('font-size', curSize);
+
+        }); 
+
+  $('#decfont').click(function(){   
+
+        curSize= parseInt($('#content').css('font-size')) - 2;
+
+  if(curSize>=12)
+
+        $('#content').css('font-size', curSize);
+
+        });
+
+ });
+
+</script>
+</body>
+</html>
