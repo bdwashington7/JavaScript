@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slick slider</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="slick-1.5.9/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.5.9/slick/slick-theme.css">
+    <style>
+        body{
+            background: #3498DB;
+            color: #fff;
+        }
+        .my-slider {
+            width: 800px;
+            margin: 25px auto;
+        }
+        .your-class div{
+            text-align:center;
+            margin: 2px;
+        }
+        .your-class img{
+            width: 30%;
+            height: 160px;
+            display: inline-block;
+        }
+        .slider-nav img{
+            width: 100%;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="my-slider">
+        <div class="slider-nav">
+            <div><a href="#"><img src="images/image-one.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-two.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-three.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-four.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-five.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-two.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-three.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-four.jpg" alt="image"></a></div>
+            <div><a href="#"><img src="images/image-five.jpg" alt="image"></a></div>
+        </div>
+
+        <div class="your-class">
+            <div>
+                <a href="#"><img src="images/image-one.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-one.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-one.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-two.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-two.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-two.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-three.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-three.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-three.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-four.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-four.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-four.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-five.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-five.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-five.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-two.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-two.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-two.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-three.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-three.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-three.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-four.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-four.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-four.jpg" alt="image"></a>
+            </div>
+            <div>
+                <a href="#"><img src="images/image-five.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-five.jpg" alt="image"></a>
+                <a href="#"><img src="images/image-five.jpg" alt="image"></a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="slick-1.5.9/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+//            $('.your-class').slick({
+//                dots: true,
+//                infinite: true,
+//                speed: 300,
+//                slidesToShow: 3
+//            });
+//
+        $('.your-class').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            asNavFor: '.your-class',
+            dots: true,
+            focusOnSelect: true
+        });
+});
+    </script>
+
+</body>
+</html>
