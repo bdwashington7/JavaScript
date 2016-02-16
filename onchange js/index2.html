@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange2 JS</title>
+    <style>
+        h3 i{
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<h3>First is: <i id="s-one"></i></h3>
+<select name="" id="changeOne" onchange="firstStudent()">
+    <option value="">-select-</option>
+    <option value="Shahali">Shahali</option>
+    <option value="Nasir">Nasir</option>
+    <option value="Burhan">Burhan</option>
+</select>
+<br>
+<h3>Second is: <i id="s-two"></i></h3>
+<select name="" id="changeTwo" onchange="secondStudent()">
+    <option value="">-select-</option>
+    <option value="Shahali">Shahali</option>
+    <option value="Nasir">Nasir</option>
+    <option value="Burhan">Burhan</option>
+</select>
+<br>
+<h3>Third is: <i id="s-three"></i></h3>
+<select name="" id="changeThree" onchange="thirdStudent()">
+    <option value="">-select-</option>
+    <option value="Shahali">Shahali</option>
+    <option value="Nasir">Nasir</option>
+    <option value="Burhan">Burhan</option>
+</select>
+<br>
+
+
+<script>
+    // firstStudent js
+    function firstStudent(){
+        var a = document.getElementById("changeOne").value;
+        document.getElementById("s-one").innerHTML = a;
+    }
+    // secondstudent js
+    function secondStudent(){
+        var a = document.getElementById("changeTwo").value;
+        document.getElementById("s-two").innerHTML = a;
+    }
+    // firstStudent js
+    function thirdStudent(){
+        var a = document.getElementById("changeThree").value;
+        document.getElementById("s-three").innerHTML = a;
+    }
+</script>
+</body>
+</html>

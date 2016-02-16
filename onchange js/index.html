@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onchange JS</title>
+</head>
+<body>
+    <h2>Take your choice</h2>
+    <hr>
+
+    <select name="" id="selectChoice" onchange="myFunction()">
+        <option value="Select Student">-- Select Student --</option>
+        <option value="ShahAli">ShahAli</option>
+        <option value="Nasir">Nasir</option>
+        <option value="Burhan">Burhan</option>
+    </select>
+
+    <h4>
+        Result is published. <br>
+        First is:
+        <b id="show" style="color:deeppink;"></b>
+    </h4>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("selectChoice").value;
+            document.getElementById("show").innerHTML = x ;
+        }
+    </script>
+</body>
+</html>
