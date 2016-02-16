@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript | ToogleMenu</title>
+    
+    <style>
+        #cpBtn{
+            position: fixed;
+            width:20px;
+            height: 21px;
+            background: linear-gradient(#fff, #ddd);
+            border: 1px solid #aaa;
+            border-radius: 2px;
+            cursor:pointer;
+            padding: 2px 5px;
+            transition: all 0.5s;
+        }
+        #cpBtn:hover{
+            border: 1px solid #000;
+        }
+        #cpBtn div{
+            width: 20px;
+            height: 3px;
+            background: #777;
+            margin: 3px 0;
+            border-radius: 4px;
+            transition: all 0.5s;
+        }
+        #cpBtn:hover div{
+            background:#000;
+        }
+        #cp{
+            width: 200px;
+            background: #333;
+            position: absolute;
+            left: -200px;
+            top: 45px;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="cpBtn" onclick="toogleCp()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <div id="cp">
+        
+    </div>
+    
+    <script>
+        function toogleCp(){
+            var cp = document.getElementById("cp");
+            cp.style.height = window.innerHeight - 90+"px";
+            
+            if(cp.style.left == "0px"){
+                cp.style.left = "-200px";
+            }
+            else{
+                cp.style.left = "0px"; 
+            }
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
