@@ -1,0 +1,23 @@
+
+/* top-nav css*/
+#top-nav{
+    height: auto;
+    min-height: 0;
+    background: #272729;
+}
+#info-nav .navbar-nav li a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#button-swip {
+    background: #424244 none repeat scroll 0 0;
+    margin: 5px 0;
+    padding: 4px 10px;
+}
+.navbar{
+    border-radius: 0;
+}
+#info-nav  .nav.navbar-nav.navbar-right > li {
+    border-left: 1px solid #1f1f1f;
+    border-right: 1px solid #363638;
+}

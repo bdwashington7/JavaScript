@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LazyLoads</title>
+    <style>
+        img{
+            width: 600px;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<img data-original="images/image-five.jpg" alt="Image" class="lazy">
+<img data-original="images/image-five.jpg" alt="Image" class="lazy">
+<img data-original="images/image-five.jpg" alt="Image" class="lazy">
+<img data-original="images/image-five.jpg" alt="Image" class="lazy">
+<img data-original="images/image-five.jpg" alt="Image" class="lazy">
+<img data-original="images/image-five.jpg" alt="Image" class="lazy">
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.lazyload.js"></script>
+<script>
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+</script>
+</body>
+</html>
