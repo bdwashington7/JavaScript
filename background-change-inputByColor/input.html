@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #box{
+        height: 100px;
+        width: 120px;
+    }
+</style>
+<body>
+
+<h1>Hello World!</h1>
+<input type="color" id="cool-color">
+<button type="button" onclick="myFunction()">Set background color</button>
+<div id="box"></div>
+<script>
+function myFunction() {
+    var a = document.getElementById("cool-color").value;
+    document.getElementById("box").style.backgroundColor = a;
+}
+</script>
+
+</body>
+</html>
