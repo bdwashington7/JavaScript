@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image change JS</title>
+    <style>
+        img{
+            width: 300px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <h1>JavaScript Can Change Images</h1>
+    <div>
+        <img id="myImage"  src="image-one.jpg" width="300">        
+        <div id="mycaption">image-1.</div>
+        <b onclick="changeImageRight()" style="cursor:pointer;display:block;">></b>
+        <b onclick="changeImageLeft()" style="cursor:pointer;display:block;"><</b>
+    </div>
+    
+
+    <p>Click the button to image change</p>
+
+    <script>
+        function changeImageRight() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("image-one")) {
+                image.src = "image-two.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-2";
+            }
+            else if (image.src.match("image-two")) {
+                image.src = "image-three.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-3";
+            }
+            else if (image.src.match("image-three")) {
+                image.src = "image-four.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-4";
+            }
+            else if (image.src.match("image-four")) {
+                image.src = "image-five.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-5";
+            } 
+            else {
+                image.src = "image-one.jpg";
+                document.getElementById("mycaption").innerHTML = "Always one";
+            }
+        }
+        function changeImageLeft() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("image-two")) {
+                image.src = "image-one.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-1";
+            }
+            else if (image.src.match("image-three")) {
+                image.src = "image-two.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-2";
+            }
+            else if (image.src.match("image-four")) {
+                image.src = "image-three.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-3";
+            }
+            else if (image.src.match("image-five")) {
+                image.src = "image-four.jpg";
+                document.getElementById("mycaption").innerHTML = "Our image-4";
+            } 
+            else {
+                image.src = "image-five.jpg";
+                document.getElementById("mycaption").innerHTML = "Always 5";
+            }
+        }
+    </script>
+</body>
+</html>
